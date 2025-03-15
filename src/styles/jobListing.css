@@ -5,7 +5,7 @@
 
 .job-listing-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .job-card-container {
@@ -28,14 +28,21 @@
 }
 
 .job-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 0.5rem 0;
     font-weight: bold;
 }
 
-.job-company, .job-location, .job-description {
-    margin: 0.3rem 0;
+.job-description {
+    font-size: 1rem;
+    margin: 0.5rem 0;
     color: #555;
+}
+
+.job-company, .job-location, .job-skills, .job-status, .job-date {
+    margin: 0.3rem 0;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .apply-button {
