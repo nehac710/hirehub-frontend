@@ -2,13 +2,14 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     padding: 40px 200px;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(228, 225, 225);
+    background-color: white;
   }
   .navbar h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .nav-link {

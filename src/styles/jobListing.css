@@ -57,5 +57,5 @@
 }
 
 .apply-button:hover {
-    background-color: #beb655;
+    transform: scale(1.1); /* Move the button up by 5px */
 }
