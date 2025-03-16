@@ -103,7 +103,7 @@ function JobPosting() {
         </div>
         <div className="right-section">
           <img
-            src="assets\Premium Vector _ We are hiring background concept.jpeg"
+            src="assets\freelance.jpg"
             alt="Job Posting"
             className="right-image"
           />

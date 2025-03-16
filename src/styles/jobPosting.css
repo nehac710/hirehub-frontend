@@ -6,6 +6,7 @@
   padding: 2rem;
   background-color: #f3f4f6;
   font-family: 'Arial', sans-serif;
+  background-color: #a9a14948;
 }
 
 .container {
@@ -18,9 +19,12 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.left-section, .right-section {
+.left-section{ 
   flex: 1;
   padding: 2rem;
+}
+.right-section {
+  flex: 1;
 }
 
 .left-section {
@@ -40,14 +44,17 @@
   justify-content: center;
   align-items: center;
   background-color: #eef2f7;
+  position: relative;
+  border-radius: 8px;
+
 }
 
 .right-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%;      /* Make the image take up the full width of the container */
+  height: 100%;     /* Make the image take up the full height of the container */
+  object-fit: cover; /* Ensures the image covers the entire container without distortion */
   border-radius: 8px;
-  object-fit: cover;
-  
+  position: relative;
 }
 
 label {
@@ -69,8 +76,8 @@ textarea {
 
 .post-job-button {
   padding: 0.8rem;
-  background-color: #2563eb;
-  color: white;
+  background-color: rgb(238, 232, 170);
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -78,7 +85,7 @@ textarea {
 }
 
 .post-job-button:hover {
-  background-color: #1d4ed8;
+  background-color: #beb655;
 }
 
 .left-section h2 {
