@@ -1,44 +1,87 @@
-.job-posting-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+.job-posting-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #f3f4f6;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  height: 85vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.left-section, .right-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.left-section {
+  border-right: 1px solid #ddd;
+  position: relative;
+  overflow-y: auto;
+}
+
+.job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef2f7;
+}
+
+.right-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
   
-  .job-posting-form label {
-    display: block;
-    margin: 0.5rem 0;
-    font-weight: bold;
-  }
-  
-  .job-posting-form input,
-  .job-posting-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0.5rem 0 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .job-posting-form textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  .post-job-button {
-    padding: 0.6rem 1.2rem;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .post-job-button:hover {
-    background-color: #1d4ed8;
-  }
-  
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.post-job-button {
+  padding: 0.8rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-job-button:hover {
+  background-color: #1d4ed8;
+}
+
+.left-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}

@@ -8,7 +8,7 @@ function JobPosting() {
     description: "",
     client_id: "",
     budget: "",
-    skills_required: "", // Will store as a comma-separated string
+    skills_required: "",
     status: "open",
   });
 
@@ -20,16 +20,14 @@ function JobPosting() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Convert skills to an array
-    const skillsArray = jobData.skills_required.split(",").map(skill => skill.trim());
+    const skillsArray = jobData.skills_required
+      .split(",")
+      .map((skill) => skill.trim());
 
     try {
       const { data, error } = await supabase
         .from("jobs")
-        .insert([{
-          ...jobData,
-          skills_required: skillsArray, // Send as an array
-        }]);
+        .insert([{ ...jobData, skills_required: skillsArray }]);
 
       if (error) throw error;
 
@@ -49,56 +47,68 @@ function JobPosting() {
   };
 
   return (
-    <div className="job-posting-container">
-      <h2>Post a New Job</h2>
-      <form onSubmit={handleSubmit} className="job-posting-form">
-        <label>Project Name:</label>
-        <input
-          type="text"
-          name="project_name"
-          value={jobData.project_name}
-          onChange={handleChange}
-          required
-        />
+    <div className="job-posting-page">
+      <div className="container">
+        <div className="left-section">
+          <h2>Post a New Job</h2>
+          <form onSubmit={handleSubmit} className="job-form">
+            <label>Project Name:</label>
+            <input
+              type="text"
+              name="project_name"
+              value={jobData.project_name}
+              onChange={handleChange}
+              required
+            />
 
-        <label>Description:</label>
-        <textarea
-          name="description"
-          value={jobData.description}
-          onChange={handleChange}
-          required
-        />
+            <label>Description:</label>
+            <textarea
+              name="description"
+              value={jobData.description}
+              onChange={handleChange}
+              required
+            />
 
-        <label>Client ID:</label>
-        <input
-          type="text"
-          name="client_id"
-          value={jobData.client_id}
-          onChange={handleChange}
-          required
-        />
+            <label>Client ID:</label>
+            <input
+              type="text"
+              name="client_id"
+              value={jobData.client_id}
+              onChange={handleChange}
+              required
+            />
 
-        <label>Budget:</label>
-        <input
-          type="number"
-          name="budget"
-          value={jobData.budget}
-          onChange={handleChange}
-          required
-        />
+            <label>Budget:</label>
+            <input
+              type="number"
+              name="budget"
+              value={jobData.budget}
+              onChange={handleChange}
+              required
+            />
 
-        <label>Skills Required (comma-separated):</label>
-        <input
-          type="text"
-          name="skills_required"
-          value={jobData.skills_required}
-          onChange={handleChange}
-          placeholder="e.g. React, Django, PostgreSQL"
-          required
-        />
+            <label>Skills Required (comma-separated):</label>
+            <input
+              type="text"
+              name="skills_required"
+              value={jobData.skills_required}
+              onChange={handleChange}
+              required
+            />
 
-        <button type="submit" className="post-job-button">Post Job</button>
-      </form>
+            <button type="submit" className="post-job-button">
+              Post Job
+            </button>
+          </form>
+        </div>
+        <div className="right-section">
+          <img
+            src="assets\Premium Vector _ We are hiring background concept.jpeg"
+            alt="Job Posting"
+            className="right-image"
+          />
+        </div>
+      </div>
     </div>
   );
 }
