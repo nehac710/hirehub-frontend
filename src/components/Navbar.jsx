@@ -3,7 +3,7 @@ import '../styles/Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="navbar" style = {{width: "100%"}}>
       <h1>HireHub</h1>
       <div>
         <Link to="/" className="nav-link">Home</Link>
